@@ -1,0 +1,16 @@
+main {
+    padding-inline: var(--padding-inline);
+    padding-top: var(--main-section-padding-top);
+    padding-bottom: var(--main-section-padding-bottom);
+    background-color: var(--primary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (min-height: 800px) {
+    main {
+        --main-section-padding-top: calc(var(--padding-block) * 15);
+    }
+}

@@ -1,0 +1,23 @@
+header {
+    background-color: var(--light-clr);
+    padding-inline: var(--padding-inline);
+    padding-block: var(--padding-block);
+}
+
+.logo-container {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.fast-icon {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: calc(var(--gap) * 0.2);
+    padding-inline: calc(var(--padding-inline) * 0.2);
+    padding-block: var(--padding-block);
+}

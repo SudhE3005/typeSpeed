@@ -1,0 +1,118 @@
+.typing-text-panel {
+    align-self: flex-start;
+    margin-top: var(--p1);
+    position: relative;
+    padding-inline: var(--padding-inline);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    max-width: 1000px;
+}
+
+.typing-text-panel>div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-display {
+    line-height: 1.65;
+    border-radius: var(--border-radius);
+    padding-inline: var(--padding-inline);
+    padding-block: var(--padding-block);
+    font-size: calc(var(--font-size-text) * 1.3);
+    background-color: var(--light-clr);
+    position: relative;
+    overflow: hidden;
+}
+
+.words {
+    font-weight: 500;
+    height: 9rem;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: calc(var(--gap) * 0.8);
+    line-height: 1.3;
+    position: relative;
+}
+
+.words .highlight-current {
+    background-color: var(--current-text-highlight-clr);
+}
+
+.words .highlight-wrong {
+    background-color: var(--incorrect-text-clr);
+}
+
+.words .highlight-correct {
+    color: var(--correct-text-clr);
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+}
+
+.controls>div {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--gap);
+    text-align: center;
+}
+
+#text-input,
+#time-remaining {
+    padding-inline: var(--padding-inline);
+
+    padding-block: var(--padding-block);
+}
+
+#text-input {
+    background-color: var(--light-clr);
+    width: 100%;
+}
+
+#time-remaining {
+    background-color: var(--accent-clr);
+    color: var(--light-clr);
+    border-radius: var(--border-radius);
+    outline: none;
+    border: none;
+}
+
+.settings-icon {
+    width: 1.5rem;
+    z-index: 555;
+}
+
+#restart-btn {
+    background-color: var(--light-clr);
+}
+
+#restart-btn:hover {
+    color: var(--primary-clr-30);
+    border-color: var(--secondary-clr);
+}
+
+@media screen and (max-width: 320px) {
+    .controls {
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .words {
+        font-size: var(--font-size-text);
+        line-height: 1.2;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

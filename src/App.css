@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+:root {
+    /* color */
+    --light-clr: #fff;
+    --black-clr: #000000;
+    --primary-clr: #80558C;
+    --primary-clr-30: #AF7AB3;
+    --secondary-clr: #CBA0AE;
+    --accent-clr: #6E85B7;
+    --accent-clr-50: #B2C8DF;
+    --secondary-clr-50: #E4D192;
+
+
+    --correct-text-clr: var(--secondary-clr);
+    --current-text-highlight-clr: var(--primary-clr-30);
+    --incorrect-text-clr: var(--accent-clr);
+
+
+    /* font */
+    --ff-1: 'Dot Matrix', sans-serif;
+                                                
+    --ff-2: 'Dot Matrix', sans-serif;
+
+    /* font sizes at differnt screen sizes*/
+    --font-size-text: 1.4rem;
+    --font-size-heading: 1.8rem;
+    --font-size-reg: 1rem;
+
+    /* spacing */
+    --gap: 1rem;
+    --p1: 1rem;
+
+    --padding-block: 0.5rem;
+    --padding-inline: 0.8rem;
+
+    --margin-block: 1rem;
+    --margin-inline: 1.3rem;
+
+    --border-radius: 0.4rem;
+    --outline-clr: #000;
+
+    --main-section-padding-top: calc(var(--padding-block) * 3);
+    --main-section-padding-bottom: calc(var(--padding-block) * 2); 
+
+    /* other */
+    --score-size: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.h1 {
+    font-weight: 700;
+    font-size: var(--font-size-heading);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,
+input,
+.btn,
+select {
+    font-weight: 400;
+    border-radius: var(--border-radius);
+    border: none;
+    outline: 0px solid var(--outline-clr);
+    font-family: inherit;
+    transition: all 0.2s ease-in;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p,
+.btn,
+input {
+    font-size: var(--font-size-text);
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.btn,
+select {
+    padding-inline: var(--padding-inline);
+    padding-block: calc(var(--padding-block));
+}
+
+
+input:focus,
+.btn:hover {
+    outline-width: calc(var(--p1) * 0.2);
+    outline-style: solid
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 0.9rem;
+    }
+
+    :root {
+        --padding-inline: 0.6rem;
+    }
 }
